@@ -9,7 +9,7 @@ const headerNav = [
   },
   {
     display: 'Movies',
-    path: 'movie'
+    path: '/movie'
   },
   {
     display: 'TV shows',
@@ -25,7 +25,7 @@ function Header() {
 
   useEffect(() => {
     const shrinkHeader = () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      if (window.scrollY >= 10) {
         headerRef.current.classList.add('shrink')
       } else {
         headerRef.current.classList.remove('shrink')
@@ -49,7 +49,6 @@ function Header() {
           </li>
         ))}
       </ul>
-
     </div>
   )
 }
