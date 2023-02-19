@@ -36,11 +36,20 @@ function Header() {
       window.removeEventListener('scroll', shrinkHeader)
     }
   }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div ref={headerRef} className="header">
       <div className='header__wrap container'>
         <div className='logo'>
-          <Link to="/">app logo</Link></div>
+          <Link to="/" onClick={scrollToTop}>app logo</Link>
+        </div>
       </div>
       <ul className='header__nav'>
         {headerNav.map((e, i) => (

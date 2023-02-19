@@ -3,6 +3,7 @@ import './movie-card.scss'
 import { Link } from 'react-router-dom'
 import { category } from '../../api/tmdbApi'
 import { apiConfig } from '../../api/apiConfig'
+import Button from '../button/Button'
 
 function MovieCard(props) {
     const item = props.item
@@ -11,8 +12,11 @@ function MovieCard(props) {
     return (
         <Link to={link}>
             <div className='movie-card' style={{ backgroundImage: `url(${bg})` }}>
-
+                <Button>
+                    <i className='bx bx-play'></i>
+                </Button>
             </div>
+            <h3 className='title-card'>{item.title || item.name}</h3>
         </Link>
     )
 }
