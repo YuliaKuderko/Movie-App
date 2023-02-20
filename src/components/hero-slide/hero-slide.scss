@@ -46,7 +46,7 @@
                 font-size: 50px;
                 font-weight: 700;
                 line-height: 1;
-                margin-top: 350px;
+                margin-top: 200px;
                 transform: translateY(0);
 
                 @include tablet {
@@ -56,12 +56,6 @@
                 @include mobile {
                     font-size: 30px;
                 }
-            }
-
-            .rating{
-                color: white;
-                font-size: 20px;
-                transform: translateY(0);
             }
 
             .overview {

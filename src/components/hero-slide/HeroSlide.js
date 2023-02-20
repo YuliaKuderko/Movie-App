@@ -83,7 +83,7 @@ function HeroSlideItem(props) {
                 <div style={{ display: 'flex', gap: '20px' }}>
                     <Box
                         sx={{
-                            width: 350,
+                            width: 450,
                             display: 'flex',
                             alignItems: 'center',
                             textAlign:'center',
@@ -95,16 +95,15 @@ function HeroSlideItem(props) {
                             max={10}
                             readOnly
                             precision={0.5}
-                            size='large'
+                            size='medium'
                             emptyIcon={
                                 <StarBorderIcon fontSize="inherit" className={classes.emptyStar} />
                               }
-                            sx={{ border:'green'}}
+                            sx={{ }}
                         />
-                        <Box sx={{ ml: 1, fontSize: 15, color:'white', transform:'translateY(0)', textAlign: 'center', fontWeight:500}}>{item.vote_average}</Box>
-                        <Box sx={{ml:1,fontSize: 13,transform:'translateY(0)', color:'whitesmoke', textAlign: 'center'}}>| {item.vote_count}</Box>
+                        <Box sx={{ ml: 1, mt:0.4, fontSize: 15, color:'white', transform:'translateY(0)', textAlign: 'center', fontWeight:500}}>{item.vote_average}</Box>
+                        <Box sx={{ml:1,mt:0.2,fontSize: 13,transform:'translateY(0)', color:'whitesmoke', textAlign: 'center'}}>| {item.vote_count}</Box>
                     </Box>
-                    <div className='rating'></div>
                 </div>
                 <div className='overview'>{item.overview}</div>
                 <div className='btns'>
