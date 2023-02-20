@@ -46,11 +46,9 @@ function Header() {
 
   return (
     <div ref={headerRef} className="header">
-      <div className='header__wrap container'>
         <div className='logo'>
           <Link to="/" onClick={scrollToTop}>app logo</Link>
         </div>
-      </div>
       <ul className='header__nav'>
         {headerNav.map((e, i) => (
           <li key={i} className={i === active ? 'active' : ''}>
