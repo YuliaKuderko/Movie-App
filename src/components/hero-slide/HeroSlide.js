@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import Rating from '@mui/material/Rating';
+import Box from '@mui/material/Box';
+import StarBorderIcon from "@material-ui/icons/StarBorder";
+import { makeStyles } from "@material-ui/core/styles";
 import './hero-slide.scss'
 import '../button/button.scss'
 import Modal, { ModalContent } from '../modal/Modal'
 import tmdbApi, { category, movieType } from '../../api/tmdbApi'
 import { apiConfig } from '../../api/apiConfig'
-
 import SwiperCore, { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -66,17 +68,51 @@ function HeroSlideItem(props) {
         modal.classList.toggle('active')
     }
 
+    const useStyles = makeStyles((theme) => ({
+        emptyStar: {
+          color: "orange",
+          
+        }
+      }));
+      const classes = useStyles();
+
     return (
         <div className='hero-slide__item' style={{ backgroundImage: `url(${background})` }}>
             <div className='hero-slide__item__content__info'>
                 <h2 className='title'>{item.title}</h2>
+                <div style={{ display: 'flex', gap: '20px' }}>
+                    <Box
+                        sx={{
+                            width: 350,
+                            display: 'flex',
+                            alignItems: 'center',
+                            textAlign:'center',
+                            mt: 2
+                        }}
+                    >
+                        <Rating
+                            value={item.vote_average}
+                            max={10}
+                            readOnly
+                            precision={0.5}
+                            size='large'
+                            emptyIcon={
+                                <StarBorderIcon fontSize="inherit" className={classes.emptyStar} />
+                              }
+                            sx={{ border:'green'}}
+                        />
+                        <Box sx={{ ml: 1, fontSize: 15, color:'white', transform:'translateY(0)', textAlign: 'center', fontWeight:500}}>{item.vote_average}</Box>
+                        <Box sx={{ml:1,fontSize: 13,transform:'translateY(0)', color:'whitesmoke', textAlign: 'center'}}>| {item.vote_count}</Box>
+                    </Box>
+                    <div className='rating'></div>
+                </div>
                 <div className='overview'>{item.overview}</div>
                 <div className='btns'>
-                    <Button onClick={() => navigate('/movie/' + item.id)}>
-                        Watch Now
-                    </Button>
-                    <OutlineButton onClick={setModalActive}>
+                    <Button onClick={setModalActive}>
                         Watch Trailer
+                    </Button>
+                    <OutlineButton onClick={() => navigate('/movie/' + item.id)}>
+                        Read
                     </OutlineButton>
                 </div>
             </div>

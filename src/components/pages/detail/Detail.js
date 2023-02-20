@@ -12,10 +12,18 @@ function Detail() {
   const { category, id } = useParams()
   const [item, setItem] = useState(null)
 
+  const toHoursAndMinutes = (totalMinutes) => {
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+  
+    return `${hours} hours and ${minutes} minutes }`;
+  }
+
   useEffect(() => {
     const getDetail = async () => {
       const response = await tmdbApi.detail(category, id, { params: {} })
       setItem(response)
+      console.log(response)
       window.scrollTo(0, 0)
     }
     getDetail()
