@@ -46,7 +46,7 @@ function Header() {
 
   return (
     <div ref={headerRef} className="header">
-        <div className='logo'>
+        <div className='header-logo'>
           <Link to="/" onClick={scrollToTop}>app logo</Link>
         </div>
       <ul className='header__nav'>

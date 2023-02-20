@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className='footer' style={{backgroundImage:`url(${footerImg})`}}>
 
-          <div className='logo'>
+          <div className='footer-logo'>
             <Link to="/">app logo</Link>
           </div>
 
