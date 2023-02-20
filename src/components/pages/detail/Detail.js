@@ -6,6 +6,8 @@ import './detail.scss'
 import CastList from './CastList'
 import VideoList from './VideoList'
 import MovieList from '../../movie-list/MovieList'
+import { BsClock, BsCalendar2Date } from "react-icons/bs";
+import { SiThemoviedatabase } from "react-icons/si";
 
 function Detail() {
 
@@ -15,8 +17,12 @@ function Detail() {
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;
-  
-    return `${hours} hours and ${minutes} minutes }`;
+    if (hours === 0) {
+      return `${minutes} minutes`;
+    } else if (hours === 1) {
+      return `${hours} hour ${minutes} minutes`;
+    }
+    return `${hours} hours ${minutes} minutes`;
   }
 
   useEffect(() => {
@@ -36,9 +42,7 @@ function Detail() {
           <div className='banner' style={{ backgroundImage: `url(${apiConfig.originalImage(item.backdrop_path || item.poster_path)})` }} />
           <div className='mb-3 movie-content container'>
             <div className='movie-content__poster'>
-              <div className='movie-content__poster__img' style={{ backgroundImage: `url(${apiConfig.originalImage(item.poster_path || item.backdrop_path)})` }}>
-
-              </div>
+              <div className='movie-content__poster__img' style={{ backgroundImage: `url(${apiConfig.originalImage(item.poster_path || item.backdrop_path)})` }}></div>
             </div>
             <div className='movie-content__info'>
               <h1 className='title'>
@@ -52,24 +56,39 @@ function Detail() {
               <p className='overview'>
                 {item.overview}
               </p>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <BsClock style={{ fontSize: '20px' }} />
+                  <h5 style={{ marginTop: '2px' }}>{toHoursAndMinutes(item.runtime || item.last_episode_to_air.runtime) || 'none'}</h5>
+                </div>
+                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <SiThemoviedatabase style={{ fontSize: '20px' }} />
+                  <h5 style={{ marginTop: '2px' }}>{item.vote_average.toFixed(1)} / 10</h5>
+                </div>
+                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <BsCalendar2Date style={{ fontSize: '20px' }} />
+                  <h5 style={{ marginTop: '3px' }}>{new Date(item.release_date || item.last_air_date).toDateString()}</h5>
+                </div>
+
+              </div>
               <div className='cast'>
                 <div className='section__header'>
                   <h2>Casts</h2>
                 </div>
-                  <CastList id={item.id}/>
+                <CastList id={item.id} />
               </div>
             </div>
           </div>
           <div className='container'>
-                  <div className='section mb-3'>
-                    <VideoList id={item.id}/>
-                  </div>
-                  <div className='section mb-3'>
-                    <div className='section__header mb-2'>
-                      <h2>Similar</h2>
-                    </div>
-                    <MovieList category={category} type="similar" id={item.id}/>
-                  </div>
+            <div className='section mb-3'>
+              <VideoList id={item.id} />
+            </div>
+            <div className='section mb-3'>
+              <div className='section__header mb-2'>
+                <h2>Similar</h2>
+              </div>
+              <MovieList category={category} type="similar" id={item.id} />
+            </div>
           </div>
         </>
       )}
