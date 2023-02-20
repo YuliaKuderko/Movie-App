@@ -49,7 +49,7 @@ function HeroSlide() {
 }
 
 function HeroSlideItem(props) {
-    const history = useNavigate()
+    const navigate = useNavigate()
     const item = props.item
     const background = apiConfig.originalImage(item.backdrop_path ? item.backdrop_path : item.poster_path)
 
@@ -72,7 +72,7 @@ function HeroSlideItem(props) {
                 <h2 className='title'>{item.title}</h2>
                 <div className='overview'>{item.overview}</div>
                 <div className='btns'>
-                    <Button onClick={() => history.push('/movie/' + item.id)}>
+                    <Button onClick={() => navigate('/movie/' + item.id)}>
                         Watch Now
                     </Button>
                     <OutlineButton onClick={setModalActive}>

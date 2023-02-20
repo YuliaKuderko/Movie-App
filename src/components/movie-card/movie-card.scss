@@ -42,4 +42,7 @@
 
 .title-card {
     text-align: center;
+    &:hover{
+        color: $main-color;
+    }
 }

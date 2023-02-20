@@ -20,9 +20,15 @@
     width: 100%;
     max-width: 500px;
 
+    @include mobile {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
     input {
         width: 100%;
         padding-right: 8rem;
+        height: 25px;
     }
 
     button {
@@ -31,8 +37,9 @@
         top: 2px;
 
         @include mobile {
-            right: 1px;
-            top: 1px;
+            right: 10px;
+            top: 0;
+            height: 24px;
         }
     }
 }
