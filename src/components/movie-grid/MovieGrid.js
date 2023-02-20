@@ -5,6 +5,7 @@ import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi'
 import { useNavigate, useParams } from 'react-router-dom'
 import Button, { OutlineButton } from '../button/Button'
 import Search from '../search/Search'
+import { FaSearch } from "react-icons/fa";
 
 function MovieGrid(props) {
     const [items, setItems] = useState([])
@@ -114,7 +115,7 @@ function MovieSearch(props) {
                 placeholder="search.."
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)} />
-            <Button className='small' onClick={goToSearch}>Search</Button> 
+            <Button className='small' onClick={goToSearch}><FaSearch/></Button> 
         </div>
     )
 }

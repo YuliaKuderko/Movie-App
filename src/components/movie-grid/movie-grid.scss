@@ -28,7 +28,10 @@
     input {
         width: 100%;
         padding-right: 8rem;
-        height: 25px;
+        
+        @include mobile {
+            height: 25px;
+        }
     }
 
     button {

@@ -6,7 +6,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Home from './components/pages/Home'
 import Catalog from './components/pages/Catalog'
-import Detail from './components/pages/Detail'
+import Detail from './components/pages/detail/Detail'
 
 function App() {
   return (
