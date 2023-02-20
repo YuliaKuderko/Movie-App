@@ -2,26 +2,35 @@
 
 .footer {
     position: relative;
-    padding: 70px 50px;
+    padding-top: 50px;
+    padding-bottom: 70px;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: black;
+
+    .logo {
+       display: flex;
+        margin-bottom: 3rem;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            display: block;
+        }
+    }
 
     &__content {
 
 
-        &__logo {
-            @include flex(center, center);
-            margin-bottom: 3rem;
-        }
 
         &__menus {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            place-items: center;
 
             @include mobile {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
             }
         }
 
@@ -33,7 +42,7 @@
             font-size: 1.5rem;
             font-weight: 600;
 
-            & > * ~ * {
+            &>*~* {
                 margin-top: 1rem;
             }
         }
