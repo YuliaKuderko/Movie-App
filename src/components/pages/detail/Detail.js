@@ -49,7 +49,7 @@ function Detail() {
                 {item.title || item.name}
               </h1>
               <div className='genres'>
-                {item.genres && item.genres.slice(0, 5).map((genre, i) => (
+                {item.genres && item.genres.slice(0, 4).map((genre, i) => (
                   <span className='genres__item' key={i}>{genre.name}</span>
                 ))}
               </div>
