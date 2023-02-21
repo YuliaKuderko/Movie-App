@@ -24,10 +24,10 @@ function Footer() {
           <Link to='/'>Privacy policy</Link>
         </div>
         <div className='footer__content__menu'>
-          <Link to='/'>You must watch</Link>
+          <Link to='/'>Must watch</Link>
           <Link to='/'>Recent release</Link>
           <Link to='/'>Top IMBD</Link>
-          <Link to='/'>About us</Link>
+          <Link to='/'>Subscribe</Link>
         </div>
       </div>
       <p> All Rights Reserved &copy; <span>yulia kuderko.</span></p>
