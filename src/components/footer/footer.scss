@@ -3,7 +3,7 @@
 .footer {
     position: relative;
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 150px;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,6 +15,28 @@
         align-items: center;
         font-size: 2.5rem;
         font-weight: 600;
+    }
+
+    p {
+        background: $body-bg;
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Lora', serif;
+        font-style: italic;
+        word-spacing: 1px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+    
+    span {
+        background: $body-bg;
+        font-family: 'Lora', serif;
+        text-transform: uppercase;
+        opacity: 0.7;
     }
 
     &__content {

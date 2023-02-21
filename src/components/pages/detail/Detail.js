@@ -57,17 +57,17 @@ function Detail() {
                 {item.overview}
               </p>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <BsClock style={{ fontSize: '20px' }} />
                   <h5 style={{ marginTop: '2px' }}>{toHoursAndMinutes(item.runtime || item.last_episode_to_air.runtime) || 'none'}</h5>
                 </div>
-                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <SiThemoviedatabase style={{ fontSize: '20px' }} />
                   <h5 style={{ marginTop: '2px' }}>{item.vote_average.toFixed(1)} / 10</h5>
                 </div>
-                <div className='more-details' style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <BsCalendar2Date style={{ fontSize: '20px' }} />
-                  <h5 style={{ marginTop: '3px' }}>{new Date(item.release_date || item.last_air_date).toDateString()}</h5>
+                  <h5 style={{ marginTop: '2px' }}>{new Date(item.release_date || item.last_air_date).toDateString()}</h5>
                 </div>
 
               </div>
