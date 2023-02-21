@@ -60,7 +60,7 @@ function HeroSlideItem(props) {
         const videos = await tmdbApi.getVideos(category.movie, item.id)
         console.log(videos)
         if (videos.results.length > 0) {
-            const videoSrc = 'https://www.youtube.com/embed/' + videos.results[0].key
+            const videoSrc = 'https://www.youtube.com/embed/' + videos.results.find(e=>e.type==="Trailer").key
             modal.querySelector('.modal__content > iframe').setAttribute('src', videoSrc)
         } else {
             modal.querySelector('.modal__content').innerHTML = 'No trailer available'

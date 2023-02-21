@@ -35,11 +35,10 @@
 
         &__close {
             position: absolute;
-            right: 5px;
-            top: 5px;
-            font-size: 1.5rem;
+            right: 3px;
+            top: -1px;
+            font-size: 30px;
             cursor: pointer;
-            
 
             &:hover {
                 color: $main-color;
