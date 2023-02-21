@@ -3,10 +3,13 @@
 .footer {
     position: relative;
     padding-top: 50px;
-    padding-bottom: 150px;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mobile {
+        padding-bottom: 25px;
+    }
 
     .footer-logo {
        display: flex;
@@ -18,7 +21,6 @@
     }
 
     p {
-        background: $body-bg;
         padding: 10px;
         font-size: 18px;
         text-align: center;
@@ -27,13 +29,34 @@
         word-spacing: 1px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        bottom: 0;
-        position: absolute;
-        width: 100%;
+        margin-top: 100px;
+        position: relative;
+
+        @include mobile {
+            
+        }
+
+        ::before{
+            content: '';
+            position: absolute;
+            bottom: 50px;
+            left: 32%;
+            right: 50%;
+            background-color: rgba(221, 221, 221, 0.58);
+            height: 1px;
+            width: 700px;
+
+            @include mobile {
+                width: 320px;
+                left: 10%;
+                bottom: 75px;
+            }
+        }
+
+        
     }
     
     span {
-        background: $body-bg;
         font-family: 'Lora', serif;
         text-transform: uppercase;
         opacity: 0.7;
@@ -45,11 +68,13 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             place-items: center;
+            position: relative;
 
             @include mobile {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
             }
+
         }
 
         &__menu {
