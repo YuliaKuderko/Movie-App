@@ -1,0 +1,23 @@
+@use "../../scss/" as *;
+
+.review{
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.author-details {
+    display: flex;
+    gap: 10px;
+}
+
+.review-avatar {
+    height: 55px;
+    width: 55px;
+    margin-bottom: 0.5rem;
+    border-radius: 50px;
+}
+
+.review-content{
+    margin-top: 10px;
+}
+

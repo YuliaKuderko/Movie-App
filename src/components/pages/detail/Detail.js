@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom'
 import tmdbApi from '../../../api/tmdbApi'
 import { apiConfig } from '../../../api/apiConfig'
 import './detail.scss'
+import '../../review/review.scss'
 import CastList from './CastList'
 import VideoList from './VideoList'
 import MovieList from '../../movie-list/MovieList'
 import { BsClock, BsCalendar2Date } from "react-icons/bs";
 import { SiThemoviedatabase } from "react-icons/si";
+import Review from '../../review/Review'
 
 function Detail() {
 
@@ -59,7 +61,7 @@ function Detail() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <BsClock style={{ fontSize: '20px' }} />
-                  <h5 style={{ marginTop: '2px' }}>{toHoursAndMinutes(item.runtime || item.last_episode_to_air.runtime) || 'none'}</h5>
+                  <h5 style={{ marginTop: '2px' }}>{toHoursAndMinutes(item.runtime || item.last_episode_to_air.runtime) || 'None'}</h5>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <SiThemoviedatabase style={{ fontSize: '20px' }} />
@@ -69,14 +71,15 @@ function Detail() {
                   <BsCalendar2Date style={{ fontSize: '20px' }} />
                   <h5 style={{ marginTop: '2px' }}>{new Date(item.release_date || item.last_air_date).toDateString()}</h5>
                 </div>
-
               </div>
-              <div className='cast'>
                 <div className='section__header'>
                   <h2>Casts</h2>
                 </div>
                 <CastList id={item.id} />
-              </div>
+                <div className='section__header'>
+                  <h2>Reviews</h2>
+                </div>
+                <Review id={item.id} />
             </div>
           </div>
           <div className='container'>

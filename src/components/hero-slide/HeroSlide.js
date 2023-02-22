@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-import { makeStyles } from "@material-ui/core/styles";
 import './hero-slide.scss'
 import '../button/button.scss'
 import Modal, { ModalContent } from '../modal/Modal'
@@ -13,6 +12,7 @@ import SwiperCore, { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Button, { OutlineButton } from '../button/Button'
+import StarIcon from '@mui/icons-material/Star';
 
 
 function HeroSlide() {
@@ -68,14 +68,6 @@ function HeroSlideItem(props) {
         modal.classList.toggle('active')
     }
 
-    const useStyles = makeStyles((theme) => ({
-        emptyStar: {
-          color: "orange",
-          
-        }
-      }));
-      const classes = useStyles();
-
     return (
         <div className='hero-slide__item' style={{ backgroundImage: `url(${background})` }}>
             <div className='hero-slide__item__content__info'>
@@ -96,9 +88,7 @@ function HeroSlideItem(props) {
                             readOnly
                             precision={0.5}
                             size='medium'
-                            emptyIcon={
-                                <StarBorderIcon fontSize="inherit" className={classes.emptyStar} />
-                              }
+                            emptyIcon={<StarIcon style={{ color: "grey",opacity: 0.4 }} fontSize="inherit" />}
                             sx={{ }}
                         />
                         <Box sx={{ ml: 1, mt:0.4, fontSize: 15, color:'white', transform:'translateY(0)', textAlign: 'center', fontWeight:500}}>{item.vote_average}</Box>
