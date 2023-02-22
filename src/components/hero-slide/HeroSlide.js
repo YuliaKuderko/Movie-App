@@ -111,7 +111,7 @@ function HeroSlideItem(props) {
                         Watch Trailer
                     </Button>
                     <OutlineButton onClick={() => navigate('/movie/' + item.id)}>
-                        Read
+                        More Info
                     </OutlineButton>
                 </div>
             </div>
