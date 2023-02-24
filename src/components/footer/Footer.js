@@ -11,14 +11,14 @@ function Footer() {
       </div>
       <div className='footer__content__menus'>
         <div className='footer__content__menu'>
-          <a href='/'>Home</a>
-          <a href='/contact'>Contact</a>
+          <Link to='/'>Home</Link>
+          <Link to='/contact'>Contact Us</Link>
           <Link to='/'>Terms of service</Link>
-          <a href='/about'>About us</a>
+          <Link to='/about'>About us</Link>
         </div>
         <div className='footer__content__menu'>
           <Link to='/live'>Live</Link>
-          <a href='/faq'>FAQ</a>
+          <Link to='/faq'>FAQ</Link>
           <Link to='/premium'>Premium</Link>
           <Link to='/policy'>Privacy policy</Link>
         </div>
