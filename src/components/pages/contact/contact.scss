@@ -1,3 +1,5 @@
+@use "../../../scss/" as *;
+
 .form-container {
     justify-content: center;
     align-items: center;
@@ -5,6 +7,10 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+
+    @include mobile{
+        margin-top: 10px;
+    }
 }
 
 
@@ -16,11 +22,15 @@
     transition: all 500ms ease;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+
+    @include mobile{
+        width: 330px;
+        font-size: 19px;
+    }
 }
 
 .contact-input:focus {
-    background: #f8f8f8;
-    border: 2px solid #cdc5c0;
+    background: rgb(27, 27, 27);
     outline: none;
 }
 
@@ -35,50 +45,19 @@
     background: black;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+
+    @include mobile{
+        width: 330px;
+        font-size: 19px;
+    }
 }
 
 .contact-textArea:focus {
-    background: #f8f8f8;
+    background: rgb(27, 27, 27);
     outline: none;
 }
 
 .submitBtn {
     margin-top: 25px;
-    border-radius: 5px;
-    padding: 7px 10px 7px 10px;
-    font-family: 'Urbanist', sans-serif;
-    cursor: pointer;
-    border: 1px solid #cdc5c0;
-    transition: all 500ms ease;
-    background-color: transparent;
-    font-size: 19px;
-    color: grey;
 }
 
-.submitBtn:hover {
-    border: 1px solid #b39983;
-    background-color: #f8f8f8;
-    color: #b39983;
-    box-shadow: 1px 1px 2px #b39983;
-}
-
-
-@media screen and (max-width: 600px) {
-    .form-container {
-        margin-top: 10px;
-    }
-
-    .contact-input {
-        width: 330px;
-        font-size: 19px;
-    }
-
-    .contact-textArea {
-        width: 330px;
-        font-size: 19px;
-    }
-
-    .contact-section p {
-        padding: 20px;
-    }
-}

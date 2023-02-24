@@ -4,7 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import PageHeader from '../page-header/PageHeader';
+import PageHeader from '../../page-header/PageHeader';
+import './faq.scss'
 
 export default function SimpleAccordion() {
     return (
@@ -14,62 +15,62 @@ export default function SimpleAccordion() {
             </PageHeader>
             <div className='container'>
                 <div className='mb-3'>
-                    <div style={{ padding: "0 400px 0 400px" }}>
-                        <Accordion>
+                    <div className='faq'>
+                        <Accordion className='accordion'>
                             <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon style={{color:"white"}} />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <Typography>Accordion 1</Typography>
+                                <Typography className='accordion-title'>Which technologies did you use while creating this app?</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>
+                                <Typography className='accordion-details'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion>
+                        <Accordion className='accordion'>
                             <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon style={{color:"white"}}/>}
                                 aria-controls="panel2a-content"
                                 id="panel2a-header"
                             >
-                                <Typography>Accordion 2</Typography>
+                                <Typography className='accordion-title'>How did you come up with the idea of a movies' app?</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>
+                                <Typography className='accordion-details'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion>
+                        <Accordion className='accordion'>
                             <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon style={{color:"white"}}/>}
                                 aria-controls="panel2a-content"
                                 id="panel2a-header"
                             >
-                                <Typography>Accordion 2</Typography>
+                                <Typography className='accordion-title'>Accordion 2</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>
+                                <Typography className='accordion-details'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
-                        <Accordion>
+                        <Accordion className='accordion'>
                             <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={<ExpandMoreIcon style={{color:"white"}}/>}
                                 aria-controls="panel2a-content"
                                 id="panel2a-header"
                             >
-                                <Typography>Accordion 2</Typography>
+                                <Typography className='accordion-title'>Accordion 2</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>
+                                <Typography className='accordion-details'>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                                     malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </Typography>

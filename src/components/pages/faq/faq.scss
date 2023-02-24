@@ -1,0 +1,52 @@
+@use "../../../scss/" as *;
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 200px 0px 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include tablet{
+        padding: 0px 100px 0px 100px;
+        width: 100%;
+    }
+
+    @include mobile{
+        
+    }
+}
+
+.accordion{
+    background-color: rgb(24, 24, 24);
+    color: white;
+
+    @include mobile{
+        width: 350px;
+    }
+}
+
+.accordion-title{
+    font-family: $font-family;
+    @include tablet{
+        font-size: 15px;
+    }
+
+    @include mobile{
+        font-size: 15px;
+    }
+}
+
+.accordion-details{
+    font-family: $font-family;
+    @include tablet{
+        font-size: 14px;
+    }
+
+    @include mobile{
+        font-size: 13px;
+    }
+}

@@ -31,7 +31,10 @@ export default function Contact() {
                         <input className='contact-input' id='name' type='text' placeholder='Name' name='from_name' required></input>
                         <input className='contact-input' id='email' type='email' placeholder='Email' name='email' required></input>
                         <textarea className='contact-textArea' id='message' type='text' placeholder='Your message' name='message' required></textarea>
-                        <OutlineButton className='small' type='submit'>Send email</OutlineButton>
+                        <div style={{marginTop:"20px"}}>
+                            <OutlineButton type='submit'>Send email</OutlineButton>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
