@@ -16,13 +16,12 @@
     }
 
     @include mobile{
-        
+        padding: 0px 100px 0px 100px;
+        width: 100%;
     }
 }
 
 .accordion{
-    background-color: rgb(24, 24, 24);
-    color: white;
 
     @include mobile{
         width: 350px;
@@ -31,12 +30,13 @@
 
 .accordion-title{
     font-family: $font-family;
+
     @include tablet{
         font-size: 15px;
     }
 
     @include mobile{
-        font-size: 15px;
+        font-size: 25px;
     }
 }
 

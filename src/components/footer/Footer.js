@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 import footerImg from '../../assets/footer-img.jpg'
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0
+    });
+  };
   return (
     <div className='footer' style={{ backgroundImage: `url(${footerImg})` }}>
       <div className='footer-logo'>
@@ -11,14 +16,14 @@ function Footer() {
       </div>
       <div className='footer__content__menus'>
         <div className='footer__content__menu'>
-          <Link to='/'>Home</Link>
-          <Link to='/contact'>Contact Us</Link>
+          <Link to='/' onClick={scrollToTop}>Home</Link>
+          <Link to='/contact' onClick={scrollToTop}>Contact Us</Link>
           <Link to='/'>Terms of service</Link>
           <Link to='/about'>About us</Link>
         </div>
         <div className='footer__content__menu'>
           <Link to='/live'>Live</Link>
-          <Link to='/faq'>FAQ</Link>
+          <Link to='/faq' onClick={scrollToTop}>FAQ</Link>
           <Link to='/premium'>Premium</Link>
           <Link to='/policy'>Privacy policy</Link>
         </div>
