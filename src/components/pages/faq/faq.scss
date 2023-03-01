@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 0px 200px 0px 200px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -22,7 +21,11 @@
 }
 
 #accordion {
-
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 3px;
+    box-shadow: 0 2px 3px black;
+    border-radius: 8px 8px 1px 1px;
     @include mobile {
         width: 320px;
     }
