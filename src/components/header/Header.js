@@ -47,15 +47,15 @@ function Header() {
 
   return (
     <div ref={headerRef} className="header">
-        <Link className='header-logo' to="/" onClick={scrollToTop}>
-          <img src={logoImg} />
-          
-        </Link>
-     
+      <Link className='header-logo' to="/" onClick={scrollToTop}>
+        <img src={logoImg} />
+
+      </Link>
+
       <ul className='header__nav'>
         {headerNav.map((e, i) => (
           <li key={i} className={i === active ? 'active' : ''}>
-            <Link to={e.path}>{e.display}</Link>
+            <Link onClick={scrollToTop} to={e.path}>{e.display}</Link>
           </li>
         ))}
       </ul>
