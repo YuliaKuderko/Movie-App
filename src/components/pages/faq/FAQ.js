@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PageHeader from '../../page-header/PageHeader';
 import './faq.scss'
 
-export default function SimpleAccordion() {
+export default function FAQ() {
     return (
         <>
             <PageHeader>
@@ -26,8 +26,7 @@ export default function SimpleAccordion() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography id='accordion-details' sx={{fontFamily: "Montserrat, sans-serif"}}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    JavaScript.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -41,8 +40,7 @@ export default function SimpleAccordion() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography id='accordion-details' sx={{fontFamily: "Montserrat, sans-serif"}}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    React.js, jsx, scss, material-ui, restful API.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
@@ -56,8 +54,7 @@ export default function SimpleAccordion() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography id='accordion-details' sx={{fontFamily: "Montserrat, sans-serif"}}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                    I'm a frequent visitor at the movie theaters, so I thought it would be nice if I had a website, where I could see reviews of movies and tv series, watch trailers and get more information about the recommended movies in one centralized place.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>

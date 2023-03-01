@@ -17,13 +17,13 @@ function Footer() {
       <div className='footer__content__menus'>
         <div className='footer__content__menu'>
           <Link to='/' onClick={scrollToTop}>Home</Link>
-          <Link to='/contact' onClick={scrollToTop}>Contact Us</Link>
-          <Link to='/'>Terms of service</Link>
           <Link to='/about'>About us</Link>
+          <Link to='/contact' onClick={scrollToTop}>Contact</Link>
+          <Link to='/'>Terms of service</Link>
         </div>
         <div className='footer__content__menu'>
-          <Link to='/live'>Live</Link>
           <Link to='/faq' onClick={scrollToTop}>FAQ</Link>
+          <Link to='/live'>Live</Link>
           <Link to='/premium'>Premium</Link>
           <Link to='/policy'>Privacy policy</Link>
         </div>

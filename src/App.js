@@ -9,6 +9,7 @@ import Catalog from './components/pages/Catalog'
 import Detail from './components/pages/detail/Detail'
 import FAQ from './components/pages/faq/FAQ'
 import Contact from './components/pages/contact/Contact';
+import About from './components/pages/about/About'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
       </Routes>
       <Footer />
     </HashRouter>
