@@ -11,17 +11,17 @@ function MovieList(props) {
     useEffect(() => {
         const getList = async () => {
             let response = null
-            const params={}
+            const params = {}
             if (props.type !== 'similar') {
                 switch (props.category) {
                     case category.movie:
-                        response = await tmdbApi.getMoviesList(props.type, {params})
+                        response = await tmdbApi.getMoviesList(props.type, { params })
                         break
                     default:
-                        response = await tmdbApi.getTvList(props.type, {params})
+                        response = await tmdbApi.getTvList(props.type, { params })
                 }
             } else {
-                response = await tmdbApi.similar(props.category,props.id)
+                response = await tmdbApi.similar(props.category, props.id)
             }
             setItems(response.results)
         }
@@ -32,11 +32,11 @@ function MovieList(props) {
     return (
         <div className='movie-list'>
             <Swiper grabCursor={true} spaceBetween={10} slidesPerView={'auto'}>
-               {items.map((item, i)=>(
+                {items.length !== 0 ? items.map((item, i) => (
                     <SwiperSlide key={i}>
-                        <MovieCard item={item} category={props.category}/>
+                        <MovieCard item={item} category={props.category} />
                     </SwiperSlide>
-               ))}
+                )) : <div style={{ textAlign: "center" }}>No match found</div>}
             </Swiper>
         </div>
     )
