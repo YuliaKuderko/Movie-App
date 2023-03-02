@@ -17,9 +17,9 @@ function Footer() {
       <div className='footer__content__menus'>
         <div className='footer__content__menu'>
           <Link to='/' onClick={scrollToTop}>Home</Link>
-          <Link to='/about'>About us</Link>
+          <Link to='/about' onClick={scrollToTop}>About</Link>
           <Link to='/contact' onClick={scrollToTop}>Contact</Link>
-          <Link to='/'>Terms of service</Link>
+          <Link to='/terms'>Terms of service</Link>
         </div>
         <div className='footer__content__menu'>
           <Link to='/faq' onClick={scrollToTop}>FAQ</Link>
