@@ -21,13 +21,11 @@ function CastList(props) {
             {casts.map((item, i) => (
                 <div key={i} className='casts__item'>
                     <a href={`https://en.wikipedia.org/wiki/${item.name}`}>
-                        <div className='casts__item__img' style={{ backgroundImage: `url(${apiConfig.w500Image(item.profile_path)})` }}></div>
-                    <p className='casts__item__name'>{item.name}</p>
+                        <div className='casts__item__img' style={{ backgroundImage: `url(${item.profile_path !== null ? apiConfig.w500Image(item.profile_path) : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'})` }}></div>
+                        <p className='casts__item__name'>{item.name}</p>
                     </a>
-                    
                 </div>
             ))}
-
         </div>
     )
 }
