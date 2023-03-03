@@ -82,7 +82,7 @@ export default function FAQ() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography id='accordion-details' sx={{ fontFamily: "Montserrat, sans-serif" }}>
-                                    Yes. It is compatible with desktops, tablets and mobile.
+                                    Yes. It is compatible with computers, tablets and mobile.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
