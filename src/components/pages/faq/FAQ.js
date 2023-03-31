@@ -110,7 +110,7 @@ export default function FAQ() {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography id='accordion-details' sx={{ fontFamily: "Montserrat, sans-serif" }}>
-                                    You can send an email to Yulia Kuderko via the "contact" link below located at the footer section of the page.
+                                    You can send an email to Yulia Kuderko via the "contact" tab below, that is located at the footer section of this page.
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
