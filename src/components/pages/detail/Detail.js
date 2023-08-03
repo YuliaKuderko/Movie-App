@@ -73,7 +73,7 @@ function Detail() {
                 </div>
               </div>
                 <div className='section__header'>
-                  <h2>Casts</h2>
+                  <h2>Cast</h2>
                 </div>
                 <CastList id={item.id} />
                 <div className='section__header'>
